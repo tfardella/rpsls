@@ -30,7 +30,7 @@ export function Results({userChoice, computerChoice}) {
         <div>
           <div className="choice"><span>You chose:</span> {userChoice}</div>
           <div className="choice"><span>Computer chooses:</span> {computerChoice}</div>
-          <div className="description">{result[1] ? result[1] : " "}</div>
+          <div className="description">{result[1] ? result[1] : " --- "}</div>
         </div>
         <div>
           <div className={outcomeClass}>{outcome}</div>
