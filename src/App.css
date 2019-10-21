@@ -2,21 +2,76 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 8vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: normal;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #09d3ac;
+.App .container { 
+  display: flexbox;
+  flex-direction: column;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 20px;
+}
+
+.App .item {
+	width: 125px;
+	height: 125px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: top left;
+	cursor: pointer;
+	margin: 4px 8px;
+}
+
+.App .results {
+  margin-top: 2em;
+  line-height: 1.8em;
+  min-height: 120px;
+}
+
+.App .results .choice span {
+  font-weight: bold;
+}
+.App .results .outcome {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.App .results .outcome.tie {
+  color: blue;
+}
+.App .results .outcome.win {
+  color: green;
+}
+.App .results .outcome.lose {
+  color: red;
+}
+.App .item.Rock {
+	background-image: url("/images/rock.png");
+}
+
+.App .item.Paper {
+	background-image: url("/images/paper.png");
+}
+
+.App .item.Scissors {
+	background-image: url("/images/scissors.png");
+}
+
+.App .item.Lizard {
+	background-image: url("/images/lizard.png");
+}
+
+.App .item.Spock {
+	background-image: url("/images/spock.png");
 }

@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+import { Choices } from './Choices'
+import { Results } from './Results'
+import { choices } from './outcomes'
+
 function App() {
+  const [userChoice, setUserChoice] = useState();
+  const [computerChoice, setComputerChoice] = useState();
+
+  function computerChoose() {
+    setComputerChoice ( choices[
+      Math.round(Math.random() * (choices.length - 1))
+    ]);
+  };
+
+  function handleUserChoice(choice) {
+    setUserChoice(choice)
+    setComputerChoice(computerChoose)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Rock, Paper, Scissors, Lizard, Spock
       </header>
+      <div className="container">
+        <Choices 
+          handleUserChoice = {handleUserChoice}
+        />
+        <Results 
+          computerChoice = {computerChoice}
+          userChoice = {userChoice}
+        />
+      </div>
     </div>
   );
 }
