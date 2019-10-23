@@ -14,23 +14,48 @@
   margin-bottom: 20px;
 }
 
-.App .container { 
-  display: flexbox;
-  flex-direction: column;
+.App .content {
   border: 2px solid #aaaaaa;
   border-radius: 4px;
   padding: 12px;
   margin: 20px;
 }
 
+.App .choices { 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
 .App .item {
 	width: 125px;
-	height: 125px;
-	display: inline-block;
+  height: 125px;
 	background-repeat: no-repeat;
 	background-position: top left;
+  margin: 6px 6px;
 	cursor: pointer;
-	margin: 4px 8px;
+  border-radius: 50%;
+  border: 2px solid rgb(200, 200, 200);
+}
+
+.App .item.Rock {
+	background-image: url("/images/rock.png");
+}
+
+.App .item.Paper {
+	background-image: url("/images/paper.png");
+}
+
+.App .item.Scissors {
+	background-image: url("/images/scissors.png");
+}
+
+.App .item.Lizard {
+	background-image: url("/images/lizard.png");
+}
+
+.App .item.Spock {
+	background-image: url("/images/spock.png");
 }
 
 .App .results {
@@ -55,23 +80,4 @@
 }
 .App .results .outcome.lose {
   color: red;
-}
-.App .item.Rock {
-	background-image: url("/images/rock.png");
-}
-
-.App .item.Paper {
-	background-image: url("/images/paper.png");
-}
-
-.App .item.Scissors {
-	background-image: url("/images/scissors.png");
-}
-
-.App .item.Lizard {
-	background-image: url("/images/lizard.png");
-}
-
-.App .item.Spock {
-	background-image: url("/images/spock.png");
 }

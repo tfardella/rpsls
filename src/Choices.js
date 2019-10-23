@@ -3,8 +3,7 @@ import { choices } from './outcomes'
 
 export function Choices({handleUserChoice}) {
   return (
-    <div>
-      <div>Choose wisely!</div>
+    <React.Fragment>
       {choices.map(choice => {
         const classes=`item ${choice}`
         return (
@@ -12,11 +11,11 @@ export function Choices({handleUserChoice}) {
             key={choice}
             className={classes}
             onClick={() => handleUserChoice(choice)}
-          >
-          </div>
+            aria-label={choice}
+          />
         )
       }
       )}
-    </div>
+    </React.Fragment>
   )
 }

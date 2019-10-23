@@ -25,14 +25,19 @@ function App() {
       <header className="App-header">
         Rock, Paper, Scissors, Lizard, Spock
       </header>
-      <div className="container">
-        <Choices 
-          handleUserChoice = {handleUserChoice}
-        />
-        <Results 
-          computerChoice = {computerChoice}
-          userChoice = {userChoice}
-        />
+      <div className="content">
+        <div>Choose wisely!</div>
+        <div className="choices">
+          <Choices 
+            handleUserChoice = {handleUserChoice}
+          />
+        </div>
+        <div>
+          <Results 
+            computerChoice = {computerChoice}
+            userChoice = {userChoice}
+          />
+        </div>
       </div>
     </div>
   );
